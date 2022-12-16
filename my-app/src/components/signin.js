@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { useUserContext } from "../context/userContext";
+import '../css/signin.css'
 
 const Signin = () => {
   const emailRef = useRef();
@@ -22,13 +23,12 @@ const Signin = () => {
   };
 
   return (
-    <div className="form">
+    <div className="signin_countainer">
       <h2> Login </h2>
-      <form onSubmit={onSubmit}>
+      <form className="form_signin_" onSubmit={onSubmit}>
         <input placeholder="Email" type="email" ref={emailRef} />
         <input placeholder="Password" type="password" ref={psdRef} />
         <button type="submit">Sign In</button>
-        <p onClick={forgotPasswordHandler}>Forgot Password?</p>
       </form>
     </div>
   );

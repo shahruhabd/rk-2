@@ -1,0 +1,8 @@
+.signin_countainer {
+    height: 100vh;
+    width: 100%;
+    background-image: url('./../../images/1.jfif');
+    background-size: 1550px auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
