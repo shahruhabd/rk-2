@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Header from "./components/header";
 import Home from "./pages/Home";
 import './App.css'
+import './css/signin.css'
 import Signin from "./components/signin";
 import { useUserContext } from "./context/userContext";
 import Auth from "./components/auth";
@@ -35,10 +36,11 @@ function App() {
     <div className="App">
       <div className="wrapper">
         <Header />
-        {error && <p className="error">{error}</p>}
-        {loading ? <h2>Loading...</h2> : <> {user ? <Dashboard /> : <Auth />} </>}
-        {user ? <Main/> : <></>}
-        
+        <div className="signin_container">
+          {error && <p className="error">{error}</p>}
+          {loading ? <h2>Loading...</h2> : <> {user ? <Dashboard /> : <Auth />} </>}
+          {user ? <Main/> : <></>}
+        </div>
         <Routes>
           <Route path="/" element={<Home isAuth={isAuth}/>}/>
           <Route path="/login" element={<Signin setIsAuth={setIsAuth}/>}/>

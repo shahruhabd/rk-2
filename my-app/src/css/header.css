@@ -1,0 +1,15 @@
+h1 {
+    margin: 0;
+}
+
+.header {
+    width: 1450px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.header_logo {
+    color: #19536C;
+}

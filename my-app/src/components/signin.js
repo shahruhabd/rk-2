@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { useUserContext } from "../context/userContext";
 import { useNavigate } from "react-router-dom";
 import '../css/signin.css'
+import '../App.css'
 
 const Signin = () => {
   let navigate = useNavigate();
@@ -27,12 +28,12 @@ const Signin = () => {
   };
 
   return (
-    <div className="signin_countainer">
-      <h2> Login </h2>
-      <form className="form_signin_" onSubmit={onSubmit}>
-        <input placeholder="Email" type="email" ref={emailRef} />
-        <input placeholder="Password" type="password" ref={psdRef} />
-        <button type="submit">Sign In</button>
+    <div className="signin_section">
+      <h2 className="signin_section_label">Login</h2>
+      <form className="signin_section_form" onSubmit={onSubmit}>
+        <input className="signin_section_input" placeholder="Email" type="email" ref={emailRef} />
+        <input className="signin_section_input" placeholder="Password" type="password" ref={psdRef} />
+        <button className="signin_section_submit" type="submit">Sign In</button>
       </form>
     </div>
   );
