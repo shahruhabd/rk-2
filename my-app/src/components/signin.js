@@ -1,16 +1,20 @@
 import React, { useRef } from "react";
 import { useUserContext } from "../context/userContext";
+import { useNavigate } from "react-router-dom";
 import '../css/signin.css'
 
 const Signin = () => {
+  let navigate = useNavigate();
   const emailRef = useRef();
   const psdRef = useRef();
   const { signInUser, forgotPassword } = useUserContext();
 
   const onSubmit = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const email = emailRef.current.value;
     const password = psdRef.current.value;
+    navigate('/')
+
     if (email && password) signInUser(email, password);
   };
 
