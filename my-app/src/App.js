@@ -9,6 +9,8 @@ import {
   Link,
   Routes
 } from "react-router-dom"
+import Signin from "./components/signin";
+import Signup from "./components/signup";
 
 function App() {
   const { user, loading, error } = useUserContext();
@@ -17,9 +19,9 @@ function App() {
     <div className="App">
       {error && <p className="error">{error}</p>}
       {loading ? <h2>Loading...</h2> : <> {user ? <Dashboard /> : <Auth />} </>}
-      <Routes>
-        <Route path="/main" element={<Main/>}/>
-      </Routes>
+      {/* <Routes>
+        <Route path="/" element={<Signin/>}/>
+      </Routes> */}
     </div>
   );
 }

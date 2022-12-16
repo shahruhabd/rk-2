@@ -19,13 +19,10 @@ function Main() {
       {posts.map((post) => {
          return (
             <>
-            {/* <div className="post-card" key={post.id}> */}
                <h2 className="post-title">{post.title}</h2>
                <h3>{post.price}</h3>
                <p>{post.description}</p>
                <img width={150} src={post.image} alt="" />
-                
-            {/* </div> */}
             </>
          );
       })}
