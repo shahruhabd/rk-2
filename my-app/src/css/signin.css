@@ -1,6 +1,8 @@
 .signin_container {
     display: flex;
-    justify-content: center;
+    height: 661px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .signin_section {
@@ -63,4 +65,11 @@
 .signin_section_submit:hover {
     background: #289ed1;
     transition: color 0.9s ease-in;
+}
+
+.help {
+    font-weight: 600;
+    margin-top: 10px;
+    color: #0f3342;
+    text-align: center;
 }
