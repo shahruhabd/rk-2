@@ -1,26 +1,31 @@
 .dashboard_container {
     width: 300px;
-    height: 200px;
     background: rgba(255, 255, 255, 0.7);
     margin-bottom: 20px;
     border-radius: 10px;
-    padding: 15px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .dashboard_container_label {
     text-align: center;
     color: #19536C;
-    font-size: 32px
+    font-size: 32px;
+    margin-bottom: 10px;
 }
 
 .dashboard_container_initial {
     color: #2e86ab;
     margin-top: 5px;
+    font-size: 20px;
 }
 
 .dashboard_container_logout {
+    align-self: center;
+}
+.dashboard_container_logout_btn {
     width: 150px;
     height: 30px;
     margin-top: 35px;
@@ -29,10 +34,14 @@
     border: none;
     color: #FFFF;
     font-size: 18px;
-    align-self: center;
 }
 
-.dashboard_container_logout:hover {
+.dashboard_container_logout_btn:hover {
     background: #289ed1;
     transition: color 1s ease-in;
+}
+@media (max-width: 380px) {
+    .dashboard_container {
+        width: 210px;
+    }
 }

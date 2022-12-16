@@ -1,6 +1,6 @@
 .signin_container {
     display: flex;
-    height: 661px;
+    /* height: 661px; */
     flex-direction: column;
     align-items: center;
 }
@@ -72,4 +72,12 @@
     margin-top: 10px;
     color: #0f3342;
     text-align: center;
+}
+@media (max-width: 480px) {
+    .signin_section {
+        width: 280px;
+    }
+    .signin_section_input {
+        width: 230px;
+    }
 }

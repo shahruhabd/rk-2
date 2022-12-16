@@ -14,7 +14,7 @@ const Signin = () => {
     // e.preventDefault();
     const email = emailRef.current.value;
     const password = psdRef.current.value;
-    navigate('/')
+    navigate('/electronics')
 
     if (email && password) signInUser(email, password);
   };

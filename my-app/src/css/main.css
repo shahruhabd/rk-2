@@ -1,13 +1,13 @@
 .container {
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 996px;
     display: flex;
     justify-content: center;
 }
 .posts-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: start;
     margin-bottom: 20px;
 }
 .post {
@@ -46,4 +46,22 @@
 .post-desc-value {
     font-weight: normal;
     color: #000;
+}
+@media (max-width: 1024px) {
+    .container {
+        max-width: 664px;
+    }
+}
+@media (max-width: 724px) {
+    .container {
+        max-width: 332px;
+    }
+    .posts-container {
+        gap: 20px;
+    }
+}
+@media (max-width: 380px) {
+    .posts-container {
+        width: 250px;
+    }
 }

@@ -14,6 +14,9 @@ import Main from "./components/main";
 
 import { signOut } from "firebase/auth";
 import { auth } from "./firebase/index";
+import './css/adapt.css'
+import Jewelery from "./pages/Jewelery";
+import MClothing from "./pages/MensClothing";
 
 function App() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
@@ -39,10 +42,20 @@ function App() {
         <div className="signin_container">
           {error && <p className="error">{error}</p>}
           {loading ? <h2>Loading...</h2> : <> {user ? <Dashboard /> : <Auth />} </>}
-          {user ? <Main/> : <></>}
+          
         </div>
+        {user ? <>
+          <div className="nav-links">
+            <Link className="nav-links_link" to="/electronics">Electronics</Link>
+            <Link className="nav-links_link" to='/mens-clothing'>Mens clothing</Link>
+            <Link className="nav-links_link" to='/jewelery'>Jewelery</Link>
+          </div>
+          </> : <></>}
         <Routes>
           <Route path="/" element={<Home isAuth={isAuth}/>}/>
+          <Route path="/jewelery" element={<Jewelery isAuth={isAuth}/>}/>
+          <Route path="/electronics" element={<Main isAuth={isAuth}/>}/>
+          <Route path="/mens-clothing" element={<MClothing isAuth={isAuth}/>}/>
           <Route path="/login" element={<Signin setIsAuth={setIsAuth}/>}/>
         </Routes>
       </div>

@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import '../css/main.css'
-import { Link } from 'react-router-dom';
 
-function Main() {
+function Jewelery() {
     const [posts, setPosts] = useState([]);
     useEffect(() => {
-        fetch('https://fakestoreapi.com/products/category/electronics')
+        fetch('https://fakestoreapi.com/products/category/jewelery')
             .then((response) => response.json())
             .then((data) => {
                 console.log(data);
@@ -37,4 +36,4 @@ function Main() {
     );
 }
 
-export default Main
+export default Jewelery
